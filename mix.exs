@@ -3,8 +3,8 @@ defmodule XmlToMap.Mixfile do
 
   def project do
     [app: :elixir_xml_to_map,
-     version: "0.1.1",
-     elixir: "~> 1.3",
+     version: "0.1.2",
+     elixir: "~> 1.6",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "A module for converting an XML string to a map",
@@ -24,7 +24,9 @@ defmodule XmlToMap.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [
+      extra_applications: [:logger]
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -38,7 +40,7 @@ defmodule XmlToMap.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:erlsom, "~>1.4"},
+      {:erlsom, "~> 1.4"},
       {:ex_doc, "~> 0.14", only: :dev}
     ]
   end
