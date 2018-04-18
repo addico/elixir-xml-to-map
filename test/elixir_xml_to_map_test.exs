@@ -11,14 +11,7 @@ defmodule XmlToMapTest do
   end
 
   def expectation do
-    %{"Orders" => %{"foo" => "bar",
-    "order" => [%{"billing_address" => "My address", "id" => "123",
-       "items" => %{"item" => %{"description" => "Hat", "itemfoo" => "itembar",
-           "price" => "5.99", "quantity" => "1", "sku" => "ABC"},
-         "itemsfoo" => "itemsbar"}},
-     %{"billing_address" => "Uncle's House", "id" => "124",
-       "items" => %{"item" => %{"description" => "Hat", "price" => "5.99",
-           "quantity" => "2", "sku" => "ABC"}}}]}}
+    %{"Orders" => %{"foo" => "bar", "Value" => %{"order" => [%{"billing_address" => "My address", "id" => "123", "items" => %{"itemsfoo" => "itemsbar", "Value" => %{"item" => %{"Value" => %{"description" => "Hat", "price" => "5.99", "quantity" => "1", "sku" => %{"Value" => "ABC", "skufoo" => "skubar"}}, "itemfoo" => "itembar"}}}}, %{"billing_address" => "Uncle's House", "id" => "124", "items" => %{"item" => %{"description" => "Hat", "price" => "5.99", "quantity" => "2", "sku" => "ABC"}}}]}}}
   end
 
 
