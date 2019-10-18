@@ -40,8 +40,8 @@ defmodule XmlToMap.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:erlsom, "~> 1.4"},
-      {:ex_doc, "~> 0.14", only: :dev}
+      {:erlsom, "~> 1.5"},
+      {:ex_doc, "~> 0.21.2", only: :dev}
     ]
   end
 end
